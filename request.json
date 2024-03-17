@@ -1,0 +1,20 @@
+curl 'https: //mon-entreprise.urssaf.fr/api/v1/evaluate' \
+  -H 'accept: application/json' \
+  -H 'content-type: application/json' \
+  --data-raw $'{
+    "expressions": [
+        "impôt . montant"
+    ],
+    "situation": {
+        "entreprise . imposition": "non",
+        "entreprise . catégorie juridique":"'\'''\''",
+        "salarié . contrat . statut cadre": "oui",
+        "salarié . activité partielle": "non",
+        "salarié . rémunération . frais professionnels . titres-restaurant": "oui",
+        "salarié . contrat . salaire brut": "3400€/mois",
+        "salarié . contrat":"'\''CDI'\''",
+        "impôt . méthode de calcul":"'\''barème standard'\''",
+        "dirigeant": "non"
+    }
+}' \
+  --compressed
