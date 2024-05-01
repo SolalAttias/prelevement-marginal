@@ -24,6 +24,7 @@ def get_response_temps_plein(remuneration: int):
     }
     return get_response_urssaf(request)
 
+
 def main() -> None:
     print("Réponses temps plein, partie 1...")
     responses_0 = [get_response_temps_plein(n) for n in tqdm(range(1300, 4500, 10))]
